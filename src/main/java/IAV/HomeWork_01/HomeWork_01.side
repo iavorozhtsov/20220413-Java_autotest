@@ -1,0 +1,575 @@
+{
+  "id": "5e3a68c6-7bad-4769-84cd-1decb245dafe",
+  "version": "2.0",
+  "name": "HomeWork_01",
+  "url": "https://www.livejournal.com/",
+  "tests": [{
+    "id": "4713c641-fe57-403e-bf95-445842935ed9",
+    "name": "2. Log In positive check",
+    "commands": [{
+      "id": "497a085e-88ef-4c64-9f88-847fef67716d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ae2d1b0-93b6-4fb5-bbfd-c77feb5924b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1166x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "048a0681-ef80-42b9-a349-b0000ce1ceee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a907b4c6-9709-4b5c-bf7d-9d17222e1443",
+      "comment": "",
+      "command": "click",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8825b43-f9ad-46fb-9a15-a5f397e9855f",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "via-20220418"
+    }, {
+      "id": "ae6ab1f8-65b8-4694-bf46-a2b83ce15453",
+      "comment": "",
+      "command": "click",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79242472-342a-449c-8f3c-a4f5861a22f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "20QWErty22"
+    }, {
+      "id": "8e6f5d16-5e17-4012-bf49-63463ed12414",
+      "comment": "",
+      "command": "//click",
+      "target": "id=remember_me",
+      "targets": [],
+      "value": "Такой ID есть, но почему-то не проходит по нему клик"
+    }, {
+      "id": "e93e74e4-25ee-42d5-a498-4e930d9beaa6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-loginform-checkbox__control",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e257113-69f6-4b15-8ceb-f56f83bd840f",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "036698e3-a689-4430-943f-16992456a8ca",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.s-nav-item__name",
+      "targets": [
+        ["css=.s-nav-item__name", "css:finder"],
+        ["xpath=//body[@id='home']/div[6]/header/div/nav[2]/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"]
+      ],
+      "value": "VIA_20220418"
+    }, {
+      "id": "8f4d755e-f7f6-4f5b-bf7e-94df6143076c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.s-nav-item__name",
+      "targets": [
+        ["css=.s-nav-item__name", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[4]/header/div/nav[2]/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f087b1b-c7c6-4cad-9d69-960fd668e287",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "faf858e7-6196-49b9-b2e0-64e3938351d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-sub-list-item__link--logout",
+      "targets": [
+        ["css=.s-header-sub-list-item__link--logout", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/ul/li[15]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/logout.bml?ret=1&user=via_20220418&sessid=12')]", "xpath:href"],
+        ["xpath=//li[15]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bd252bd-74aa-43f6-b705-e6d15dd22c21",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.s-header-item__link--login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "784724dd-e964-4d24-9ab7-0c8775f1b046",
+    "name": "1. Log In button enabled if login and password are filled",
+    "commands": [{
+      "id": "80dcd4a8-ac90-4424-a216-20992ee8d310",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.livejournal.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4623abf-63ea-4968-bd71-4a6b5dc2db0b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1166x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efb1fbf7-d431-4d19-86a8-fddff48901e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1557d7d7-7356-401d-a4f1-1242235b645d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=user",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "137a9268-ea34-405a-97f7-b627fa77c633",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "271dca5e-b39e-445d-ae33-3b0ecb705500",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.b-loginform-btn--disabled",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[4]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b3ce6ed-e7fe-46a4-bd00-5f65b0bdd4e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=user",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d4186fe-6e2c-4834-a203-e491d173d3dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "a92d9679-cd41-4d5f-b2f0-c32dc07fec4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=lj_loginwidget_password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd61b77f-7ec7-4491-83e2-2503b2e94c85",
+      "comment": "",
+      "command": "type",
+      "target": "id=lj_loginwidget_password",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "13905308-7c43-409b-be20-28206934b8f4",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//button[@class=\"b-loginform-btn b-loginform-btn--login b-loginform-btn--auth b-loginform-btn--center b-loginform-btn--disabled\"]",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[4]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": "Столь длинный XPath выбран осознанно, чтобы проверить атрибут class на отсутствие --disabled"
+    }]
+  }, {
+    "id": "bc5e8ad2-105d-47f9-9d73-e7876cff8627",
+    "name": "3. Log In negative check",
+    "commands": [{
+      "id": "3693ee00-f806-46d6-a87c-8f4f324c9acd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "289b856e-6f48-46f9-9a67-54d2ae5a2016",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1166x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc836a4f-d089-4b0f-a05f-bb448e5acb60",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d02fe51-b401-4bbd-b15e-99fff605d8f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d254babd-7b74-4434-9f47-df385bbf9ab5",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "via-20220418"
+    }, {
+      "id": "a06ad915-7371-4ef2-992c-c91b69258064",
+      "comment": "",
+      "command": "click",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c77239d-ae2c-4450-8145-2060e50a7edf",
+      "comment": "",
+      "command": "type",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "20QWErty"
+    }, {
+      "id": "2d29ae6e-8e30-450e-81d3-193db44ccd56",
+      "comment": "",
+      "command": "//click",
+      "target": "id=remember_me",
+      "targets": [],
+      "value": "Такой ID есть, но почему-то не проходит по нему клик"
+    }, {
+      "id": "501de4f7-df57-4ade-8e89-98a0dc9c9dc4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-loginform-checkbox__control",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75f98abb-5ce1-46a5-9491-2de6f2de869c",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6385378b-c986-475d-8d0d-47ce149e6e40",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.b-loginform-field--error > .b-loginform-field__errorMsg",
+      "targets": [
+        ["css=.b-loginform-field--error > .b-loginform-field__errorMsg", "css:finder"],
+        ["xpath=//html[@id='js']/body/div[4]/div[3]/div/div[2]/form/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"]
+      ],
+      "value": "Неверный пароль"
+    }]
+  }, {
+    "id": "a27f0ce7-5a66-42fe-bdcb-6ef42e289c18",
+    "name": "4. Log In bruteforce prevention check",
+    "commands": [{
+      "id": "b664e0db-c691-4055-b45e-22c9019cd6d2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42f0dc81-8d26-43d3-ba4b-481cf0f28df8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1166x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7d480db-a4de-48f3-81f2-37a2a0b03b7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-header-item__link--login",
+      "targets": [
+        ["css=.s-header-item__link--login", "css:finder"],
+        ["xpath=//a[contains(text(),'Войти')]", "xpath:link"],
+        ["xpath=//html[@id='js']/body/div[2]/header/div/nav[2]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.livejournal.com/login.bml?returnto=https://www.livejournal.com/&ret=1')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbb627a9-119e-41de-b724-7d7e849c4137",
+      "comment": "",
+      "command": "click",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2981d370-ffbb-44ae-a465-2a6e22643e81",
+      "comment": "",
+      "command": "type",
+      "target": "id=user",
+      "targets": [
+        ["id=user", "id"],
+        ["name=user", "name"],
+        ["css=#user", "css:finder"],
+        ["xpath=//input[@id='user']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "via-20220418"
+    }, {
+      "id": "70e235f2-86ac-43e4-952c-44ac526737ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d812265-df24-4492-aaff-fda146dd82fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=lj_loginwidget_password",
+      "targets": [
+        ["id=lj_loginwidget_password", "id"],
+        ["name=password", "name"],
+        ["css=#lj_loginwidget_password", "css:finder"],
+        ["xpath=//input[@id='lj_loginwidget_password']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "20QWErty"
+    }, {
+      "id": "657b60ed-dcb9-4f1e-a87a-c374aa66e191",
+      "comment": "",
+      "command": "//click",
+      "target": "id=remember_me",
+      "targets": [],
+      "value": "Такой ID есть, но почему-то не проходит по нему клик"
+    }, {
+      "id": "05da4455-7285-420a-8e9f-56a583183d95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-loginform-checkbox__control",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b7a6b31-0401-44d6-bcc0-c92ea748464e",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fd20504-f9a8-455e-8142-fe3a6e95aedd",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "1000"
+    }, {
+      "id": "950b0e75-f069-46ca-a842-cf29b145bd4a",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6988147-60c4-4854-9fc7-a213ef331917",
+      "comment": "",
+      "command": "pause",
+      "target": "",
+      "targets": [],
+      "value": "1000"
+    }, {
+      "id": "acf89e6b-dfa5-4545-a061-17a70b8af1db",
+      "comment": "",
+      "command": "click",
+      "target": "name=action:login",
+      "targets": [
+        ["name=action:login", "name"],
+        ["css=.b-loginform-btn--auth", "css:finder"],
+        ["xpath=//button[@name='action:login']", "xpath:attributes"],
+        ["xpath=//html[@id='js']/body/div[2]/div[3]/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5a9021b-a4b7-41d4-a7d8-f4dfcbda60e8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.b-loginform-field__errorMsg",
+      "targets": [
+        ["css=.s-nav-item__name", "css:finder"],
+        ["xpath=//body[@id='home']/div[6]/header/div/nav[2]/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"]
+      ],
+      "value": "Ваш IP временно заблокирован"
+    }]
+  }],
+  "suites": [{
+    "id": "6bb2591f-81ef-43ee-946f-a08653e08bb6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.livejournal.com/"],
+  "plugins": []
+}
