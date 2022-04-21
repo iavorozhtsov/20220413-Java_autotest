@@ -1,4 +1,4 @@
-package IAV;
+package IAV.HomeWork_02;
 
 /**
  * Hello world!
