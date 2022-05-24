@@ -61,22 +61,22 @@ public class HomeWork_05_06_Test extends HomeWork_05_Abstract_Test{
 
         //Ищем кнопку Написать в блог
         WebElement webElement1 = getDriver().findElement(By.cssSelector(".s-header-item__link--post"));
-        Assertions.assertEquals(webElement1.getAttribute("href"),"https://www.livejournal.com/post", "Ссылка \"Написать в блог \" ведёт на нужную страницу.");
+        Assertions.assertEquals("https://www.livejournal.com/post", webElement1.getAttribute("href"), "Ссылка \"Написать в блог \" ведёт на нужную страницу.");
         webElement1.click();
 
         //Проверяем, что открылась страница с названием Новая запись
-        Assertions.assertEquals(getDriver().getTitle(), "Новая запись", "Открылась нужная страница.");
+        Assertions.assertEquals("Новая запись", getDriver().getTitle(), "Открылась нужная страница.");
 
         //Ищем заголовок публикации
         WebElement webElement2 = getDriver().findElement(By.cssSelector("._yz"));
-        Assertions.assertEquals(webElement2.getAttribute("placeholder"), "Заголовок", "Элемент Заголовок содержит корректный текст.");
+        Assertions.assertEquals("Заголовок", webElement2.getAttribute("placeholder"), "Элемент Заголовок содержит корректный текст.");
 
         webElement2.click();
         webElement2.sendKeys("MyFirstPost");
 
         //Ищем тело публикации
         webElement2 = getDriver().findElement(By.cssSelector(".public-DraftEditorPlaceholder-inner"));
-        Assertions.assertEquals(webElement2.getText(), "Начните писать или добавьте картинку", "Базовый текст корректен.");
+        Assertions.assertEquals("Начните писать или добавьте картинку", webElement2.getText(), "Базовый текст корректен.");
 
         webElement2 = getDriver().findElement(By.cssSelector(".public-DraftEditor-content"));
         webElement2.click();

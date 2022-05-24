@@ -46,7 +46,7 @@ public class HomeWork_05_02_Test extends HomeWork_05_Abstract_Test{
 
         //Ищем имя пользователя на странице
         WebElement webElement4 = getDriver().findElement(By.cssSelector(".s-nav-item__name"));
-        Assertions.assertEquals(webElement4.getText(), "VIA_20220418","Осуществлён успешный вход под пользователем VIA_20220418.\nТест пройден.");
+        Assertions.assertEquals("VIA_20220418", webElement4.getText(), "Осуществлён успешный вход под пользователем VIA_20220418.\nТест пройден.");
 
         //Задержка для визуального подтверждения успешной аутентификации
         try {

@@ -37,7 +37,7 @@ public class HomeWork_05_05_Test extends HomeWork_05_Abstract_Test{
 
         //Ищем имя пользователя на странице
         WebElement webElement4 = getDriver().findElement(By.cssSelector(".s-nav-item__name"));
-        Assertions.assertEquals(webElement4.getText(), "VIA_20220418","Осуществлён успешный вход под пользователем VIA_20220418.");
+        Assertions.assertEquals("VIA_20220418", webElement4.getText(), "Осуществлён успешный вход под пользователем VIA_20220418.");
     }
 
     void doLogout(){
@@ -59,13 +59,13 @@ public class HomeWork_05_05_Test extends HomeWork_05_Abstract_Test{
 
         //Ищем кнопку Написать в блог
         WebElement webElement1 = getDriver().findElement(By.cssSelector(".s-header-item__link--post"));
-        Assertions.assertEquals(webElement1.getAttribute("href"),"https://www.livejournal.com/post", "Ссылка \"Написать в блог \" ведёт на нужную страницу.");
+        Assertions.assertEquals("https://www.livejournal.com/post", webElement1.getAttribute("href"), "Ссылка \"Написать в блог \" ведёт на нужную страницу.");
 
         //Прожимаем кнопку
         webElement1.click();
 
         //Проверяем, что открылась страница с названием Новая запись
-        Assertions.assertEquals(getDriver().getTitle(), "Новая запись", "Открылась нужная страница.\nТест пройден");
+        Assertions.assertEquals("Новая запись", getDriver().getTitle(), "Открылась нужная страница.\nТест пройден");
 
         //Задержка для визуального подтверждения успешной аутентификации
         try {

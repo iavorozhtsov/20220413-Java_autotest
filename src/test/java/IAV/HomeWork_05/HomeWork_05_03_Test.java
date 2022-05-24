@@ -20,7 +20,7 @@ public class HomeWork_05_03_Test extends HomeWork_05_Abstract_Test {
 
     @Test
     @DisplayName("Authentication check with wrong credentials")
-    @Disabled
+//    @Disabled
     void test (){
 
         //Ищем кнопку Войти
@@ -48,7 +48,7 @@ public class HomeWork_05_03_Test extends HomeWork_05_Abstract_Test {
         //Ищем сообщение о неправильном пароле
         WebElement webElement4 = getDriver().findElement(By.cssSelector(".b-loginform-field--error > .b-loginform-field__errorMsg"));
 
-        Assertions.assertEquals(webElement4.getText(), "Неверный пароль","Получено сообщение о неверном пароле.\nТест пройден.");
+        Assertions.assertEquals("Неверный пароль", webElement4.getText());
 
         //Задержка для визуального подтверждения неуспешной аутентификации
         try {

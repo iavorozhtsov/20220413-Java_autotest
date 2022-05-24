@@ -19,7 +19,7 @@ public class HomeWork_05_04_Test extends HomeWork_05_Abstract_Test{
  */
     @Test
     @DisplayName("IP-address blocked in case of bruteforce attempt")
-    @Disabled
+    @Disabled("Other tests can be blocked")
     void test (){
 
         //Ищем кнопку Войти
@@ -54,7 +54,7 @@ public class HomeWork_05_04_Test extends HomeWork_05_Abstract_Test{
         //Ищем сообщение о блокировке IP адреса
         WebElement webElement4 = getDriver().findElement(By.cssSelector(".b-loginform-field__errorMsg"));
 
-        Assertions.assertEquals(webElement4.getText(), "Ваш IP временно заблокирован", "Получено сообщение о блокировке IP-адреса.\nТест пройден.");
+        Assertions.assertEquals("Ваш IP временно заблокирован", webElement4.getText(), "Получено сообщение о блокировке IP-адреса.\nТест пройден.");
 
         //Задержка для визуального подтверждения неуспешной аутентификации
         try {
