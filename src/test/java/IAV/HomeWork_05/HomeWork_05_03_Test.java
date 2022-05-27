@@ -46,7 +46,13 @@ public class HomeWork_05_03_Test extends HomeWork_05_Abstract_Test {
         webElement3.click();
 
         //Ищем сообщение о неправильном пароле
-        WebElement webElement4 = getDriver().findElement(By.cssSelector(".b-loginform-field--error > .b-loginform-field__errorMsg"));
+        WebElement webElement4 = getDriver().findElement(By.xpath("//span[@class=\"b-loginform-field__errorMsg ng-binding\"]"));
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         Assertions.assertEquals("Неверный пароль", webElement4.getText());
 
