@@ -48,7 +48,7 @@ public class HomeWork_05_06_Test extends HomeWork_05_Abstract_Test{
         WebElement webElement1 = getDriver().findElement(By.cssSelector("._39"));
         actions.moveToElement(webElement1).perform();
 
-        WebElement webElement2 = getDriver().findElement(By.cssSelector("._w5"));
+        WebElement webElement2 = getDriver().findElement(By.xpath("//div[@class=\"_vp\"][2]/a[3]"));
         webElement2.click();
     }
 

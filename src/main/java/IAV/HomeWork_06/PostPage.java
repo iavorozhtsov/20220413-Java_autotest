@@ -20,7 +20,7 @@ public class PostPage extends AuthPage{
     @FindBy(css = "._39")
     private WebElement userMenu;
 
-    @FindBy(css = "._w5")
+    @FindBy(xpath = "//div[@class=\"_vp\"][2]/a[3]")
     private WebElement logoutBtn;
 
 
@@ -28,9 +28,9 @@ public class PostPage extends AuthPage{
         super(driver);
     }
 
-    public PostPage writeToHeadOfPost(){
+    public PostPage writeToHeadOfPost(String s){
         headOfPost.click();
-        headOfPost.sendKeys();
+        headOfPost.sendKeys(s);
 
         return this;
     }
@@ -52,6 +52,6 @@ public class PostPage extends AuthPage{
     public void doLogout(){
         Actions actions = new Actions(getDriver());
         actions.moveToElement(userMenu).perform();
-        logoutBtn.click();
+        actions.moveToElement(logoutBtn).click().build().perform();
     }
 }

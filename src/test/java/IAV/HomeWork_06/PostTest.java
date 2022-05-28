@@ -43,7 +43,6 @@ public class PostTest extends AuthTest{
         Assertions.assertEquals("Заголовок", pt.getHeaderOfPostAttrib("placeholder"));
 
         pt.doLogout();
-
     }
 
 

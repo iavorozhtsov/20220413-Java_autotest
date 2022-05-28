@@ -34,7 +34,7 @@ public class AuthTest extends HomeWork_05_Abstract_Test {
 
     @Test
     @DisplayName("Negative authentication check")
-    @Disabled("Can block other tests.")
+//    @Disabled("Can block other tests.")
     void NegativeAuthTest(){
         AuthPage ap = new AuthPage(getDriver());
 
