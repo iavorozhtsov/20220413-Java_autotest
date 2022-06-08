@@ -1,5 +1,6 @@
 package IAV.HomeWork_04;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class HomeWork_04_Test {
 
+    @Epic("Тестирование треугольника")
     @Test
     @DisplayName("Positive test")
     void FirstTest() throws HomeWork_04_Exception {
@@ -16,6 +18,7 @@ public class HomeWork_04_Test {
         Assertions.assertTrue(hw.getArea(4, 4, 4)>6);
     }
 
+    @Epic("Тестирование треугольника")
     @ParameterizedTest
     @CsvSource({ "4, 6, 4", "2, 4, 4"})
     @DisplayName("Positive test with parameters")
@@ -24,6 +27,7 @@ public class HomeWork_04_Test {
         Assertions.assertTrue(hw.getArea(sideA, sideB, sideC)>0);
     }
 
+    @Epic("Тестирование треугольника")
     @ParameterizedTest
     @CsvSource({ "3, 7, 3", "-1, 4, 4"})
     @DisplayName("Exception test")

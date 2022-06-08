@@ -1,14 +1,21 @@
-package IAV.HomeWork_06;
+package IAV.HomeWork_07;
 
-import IAV.HomeWork_05.HomeWork_05_Abstract_Test;
+import IAV.HomeWork_06.AuthPage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.lang.reflect.Method;
+
 public class AuthTest extends AbstractTest {
 
     @Test
+    @Story("Тестирование элементов окна аутентификации")
+    @Description("Кнопка Войти должна быть отключена по умолчанию")
     @DisplayName("Login button is disabled while credentials field is empty")
     void EmptyCredentialsTest(){
         AuthPage ap = new AuthPage(getDriver());
@@ -22,6 +29,8 @@ public class AuthTest extends AbstractTest {
     }
 
     @Test
+    @Story("Тестирование элементов окна аутентификации")
+    @Description("Проверка успешной аутентификации")
     @DisplayName("Positive authentication check")
     void PositiveAuthTest(){
         AuthPage ap = new AuthPage(getDriver());
@@ -33,8 +42,10 @@ public class AuthTest extends AbstractTest {
     }
 
     @Test
+    @Story("Тестирование элементов окна аутентификации")
+    @Description("Проверка отказа в аутентификации при невалидных данных")
     @DisplayName("Negative authentication check")
-    @Disabled("Can block other tests")
+//    @Disabled("Can block other tests")
     void NegativeAuthTest(){
         AuthPage ap = new AuthPage(getDriver());
 
@@ -47,9 +58,12 @@ public class AuthTest extends AbstractTest {
         }
 
         Assertions.assertEquals("Неверный пароль", ap.getErrorMessage());
+        MyUtilities.makeScreenshot(getDriver(), "./target/failure-" + System.currentTimeMillis() + ".png");
     }
 
     @Test
+    @Story("Тестирование элементов окна аутентификации")
+    @Description("Проверка работы механизма защиты от подбора пароля")
     @DisplayName("Bruteforce prevention check")
     @Disabled("Can block other tests")
     void BruteforcePreventionTest(){
@@ -64,4 +78,5 @@ public class AuthTest extends AbstractTest {
 
         Assertions.assertEquals("Ваш IP временно заблокирован", ap.getBruteforceErr());
     }
+
 }

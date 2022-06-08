@@ -1,8 +1,6 @@
 package IAV.HomeWork_06;
 
-import IAV.HomeWork_05.HomeWork_05_Abstract_Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -44,6 +42,4 @@ public class PostTest extends AuthTest{
 
         pt.doLogout();
     }
-
-
 }

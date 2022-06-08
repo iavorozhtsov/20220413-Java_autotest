@@ -1,5 +1,7 @@
 package IAV.HomeWork_05;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,9 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class HomeWork_05_05_Test extends HomeWork_05_Abstract_Test{
-/*
-    Проверка открытия страницы написания публикации при нажатии кнопки Написать в блог
- */
 
     void doLogin(){
         //Ищем кнопку Войти
@@ -51,6 +50,8 @@ public class HomeWork_05_05_Test extends HomeWork_05_Abstract_Test{
     }
 
     @Test
+    @Epic("Тестирование ЖЖ, урок 5")
+    @Description("Проверка открытия страницы написания публикации при нажатии кнопки Написать в блог")
     @DisplayName("Post button check")
     void test () throws InterruptedException {
 
