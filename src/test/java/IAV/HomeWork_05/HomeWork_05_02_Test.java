@@ -1,6 +1,8 @@
 package IAV.HomeWork_05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,11 +16,10 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork_05_02_Test extends HomeWork_05_Abstract_Test{
-/*
-    Проверка успешной аутентификации.
-    Должны перейти на домашнюю страницу с заголовком в виде имени пользователя.
- */
     @Test
+    @Epic("Тестирование ЖЖ, урок 5")
+    @Description("Проверка успешной аутентификации." +
+            "Должны перейти на домашнюю страницу с заголовком в виде имени пользователя.")
     @DisplayName("Authentication check")
     void test (){
 

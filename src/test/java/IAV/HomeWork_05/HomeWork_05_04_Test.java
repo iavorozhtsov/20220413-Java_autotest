@@ -1,6 +1,8 @@
 package IAV.HomeWork_05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -14,10 +16,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork_05_04_Test extends HomeWork_05_Abstract_Test{
-/*
-    Проверка блокировки по IP при неоднократной неуспешной аутентификации.
- */
     @Test
+    @Epic("Тестирование ЖЖ, урок 5")
+    @Description("Проверка блокировки по IP при неоднократной неуспешной аутентификации.")
     @DisplayName("IP-address blocked in case of bruteforce attempt")
     @Disabled("Other tests can be blocked")
     void test (){

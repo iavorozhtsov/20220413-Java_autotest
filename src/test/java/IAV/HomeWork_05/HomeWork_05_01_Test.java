@@ -1,6 +1,8 @@
 package IAV.HomeWork_05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,11 +16,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork_05_01_Test extends HomeWork_05_Abstract_Test{
-/*
-    При открытии окна аутентификации кнопка Войти должна быть заблокирована
-    пока пользователь не введёт хотя бы по одному символу в поля Логин и Пароль
- */
     @Test
+    @Epic("Тестирование ЖЖ, урок 5")
+    @Description("При открытии окна аутентификации кнопка Войти должна быть заблокирована" +
+            " пока пользователь не введёт хотя бы по одному символу в поля Логин и Пароль")
     @DisplayName("Login button is disabled while credentials field is empty")
     void test() {
 
