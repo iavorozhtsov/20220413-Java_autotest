@@ -1,6 +1,8 @@
 package IAV.HomeWork_05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -14,12 +16,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork_05_03_Test extends HomeWork_05_Abstract_Test {
-/*
-    Проверка отказа в аутентификации при неправильном пароле.
- */
-
     @Test
+    @Epic("Тестирование ЖЖ, урок 5")
+    @Description("Проверка отказа в аутентификации при неправильном пароле.")
     @DisplayName("Authentication check with wrong credentials")
+    @Disabled("Can block other tests")
 //    @Disabled
     void test (){
 

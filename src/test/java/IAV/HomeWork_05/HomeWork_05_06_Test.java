@@ -1,5 +1,7 @@
 package IAV.HomeWork_05;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,9 +12,6 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
 public class HomeWork_05_06_Test extends HomeWork_05_Abstract_Test{
-/*
-    Проверка наличия поля Заголовок на странице нового поста
- */
 
     void doLogin(){
         //Ищем кнопку Войти
@@ -53,6 +52,8 @@ public class HomeWork_05_06_Test extends HomeWork_05_Abstract_Test{
     }
 
     @Test
+    @Epic("Тестирование ЖЖ, урок 5")
+    @Description("Проверка наличия поля Заголовок на странице нового поста")
     @DisplayName("Header and text area fields are presents in post form")
     void test () throws InterruptedException {
 

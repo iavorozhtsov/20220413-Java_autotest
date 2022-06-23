@@ -1,5 +1,7 @@
 target/
+allure-results/
 .idea/
+.allure/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
